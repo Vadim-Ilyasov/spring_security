@@ -23,6 +23,10 @@ public class Role implements GrantedAuthority {
     @ManyToMany(mappedBy = "roles")
     private Collection<User> users;
 
+    public Role(String role) {
+        this.role = role;
+    }
+
     public Role() {
     }
 

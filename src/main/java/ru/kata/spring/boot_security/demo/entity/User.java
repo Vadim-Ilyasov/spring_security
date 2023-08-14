@@ -51,11 +51,14 @@ public class User implements UserDetails {
     private Collection<Role> roles;
 
 
-    public User(String name, String surname, Integer age, String email) {
+    public User(String name, String surname, Integer age, String email, Collection<Role> roles, String username, String password) {
         this.name = name;
         this.surname = surname;
         this.age = age;
         this.email = email;
+        this.roles = roles;
+        this.username = username;
+        this.password = password;
     }
 
     public User() {
