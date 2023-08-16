@@ -50,12 +50,6 @@ public class AdminController {
         return "redirect:/admin";
     }
 
-    @GetMapping("/{id}")
-    public String getUser(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("users", userService.getUserById(id));
-        return "show_user";
-    }
-
     @GetMapping("/{id}/replacement")
     public String replacement(Model model, @PathVariable("id") Long id) {
         model.addAttribute("users", userService.getUserById(id));
